@@ -60,8 +60,3 @@ class FernetHasher:
             return self.fernet.decrypt(valor).decode()
         except InvalidToken:
             return 'Token utilizado é inválido'
-
-
-
-fernet_gusgas = FernetHasher('9ySjtUHrGP3CM8kH57csmyTJ4+VmZexqBcgCn5vvd9w=')
-print(fernet_gusgas.decripta('gAAAAABnI6zBE3tSo4rZekPUGZ_-yuVW77_IbJ5-ml3twnI8Mfr-5kZlQP3EU9DuFM02ivnWdkVuCpQBxpaMniiezjhxNEImXQ=='))

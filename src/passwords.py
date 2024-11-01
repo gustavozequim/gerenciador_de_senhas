@@ -29,10 +29,14 @@ class ModeloBase:
         with open(caminho_tabela, 'r') as arquivo:
             texto = arquivo.readlines()
         results = []
-        atributos = vars(cls)
+        atributos = vars(cls())
 
         for linha in texto:
-            linha.split('|')
+            valores_separados = linha.split('|')
+            tmp_dict = dict(zip(atributos, valores_separados))
+            results.append(tmp_dict)
+
+        return results
 
 
 
@@ -42,8 +46,3 @@ class Senhas(ModeloBase):
         self.dominio = domiminio
         self.senha = senha
         self.creat_at = dt.now().strftime('%d/%m/%Y-%H:%M:%S')
-
-
-
-bla = Senhas(domiminio='YouTube', senha='MAssaDebislos')
-bla.save()
