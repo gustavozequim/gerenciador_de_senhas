@@ -1,0 +1,2 @@
+DIRETORIO_BD = 'key/'
+DIRETORIO_BD = 'db/'
