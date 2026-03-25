@@ -2,7 +2,7 @@ from src.passwords import Senhas
 from src.password_views import FernetHasher
 
 
-acao = input('Digite 1 para salvar nova senha ou digite 2 para ver uma senha salva: ')
+acao = input('Digite 1 para salvar nova senha ou digite 2 para ver uma senha salva. Para sair digite 3: ')
 
 match acao:
     case '1':
@@ -31,3 +31,7 @@ match acao:
                 print(f'Sua senha para {dominio} é: {senha}')
             else:
                 print(f'Nenhuma senha encontrada para: {dominio}')
+    case '3':
+        print('Saindo...')
+        
+
