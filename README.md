@@ -1,6 +1,7 @@
 # GERENCIADOR DE SENHAS
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![Status](https://img.shields.io/badge/status-concluído-green)
+
 Gerenciador de senhas que utiliza hash para criptografia.
 
 ## Como funciona:
